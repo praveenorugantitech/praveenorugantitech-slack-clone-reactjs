@@ -1,4 +1,4 @@
-# Slack Clone developed using React JS and Firebase
+# Slack Clone developed using React JS, Material UI and Firebase
 
 
 <div>
