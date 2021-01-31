@@ -17,16 +17,16 @@ function Chat() {
 
   useEffect(() => {
     if (roomId) {
-      db.collection("rooms")
+      db.collection("slack-rooms")
         .doc(roomId)
         .onSnapshot((snapshot) => {
           setRoomDetails(snapshot.data());
         });
     }
 
-    db.collection("rooms")
+    db.collection("slack-rooms")
       .doc(roomId)
-      .collection("messages")
+      .collection("slack-messages")
       .orderBy("timestamp", "asc")
       .onSnapshot((snapshot) =>
         setRoomMessages(snapshot.docs.map((doc) => doc.data()))

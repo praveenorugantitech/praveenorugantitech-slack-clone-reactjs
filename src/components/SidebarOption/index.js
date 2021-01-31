@@ -20,7 +20,7 @@ function SidebarOption({ Icon, title, addChannelOption, id }) {
     const channelName = prompt("Enter the channel name");
 
     if (channelName) {
-      db.collection("rooms").add({
+      db.collection("slack-rooms").add({
         name: channelName,
       });
     }

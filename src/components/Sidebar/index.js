@@ -26,7 +26,7 @@ function Sidebar() {
   const [{ user }] = useStateValue();
 
   useEffect(() => {
-    db.collection("rooms").onSnapshot((snapshot) =>
+    db.collection("slack-rooms").onSnapshot((snapshot) =>
       setChannels(
         snapshot.docs.map((doc) => ({
           id: doc.id,

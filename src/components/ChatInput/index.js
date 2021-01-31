@@ -16,7 +16,7 @@ function ChatInput({ channelName, channelId }) {
     console.log(channelId);
 
     if (channelId) {
-      db.collection("rooms").doc(channelId).collection("messages").add({
+      db.collection("slack-rooms").doc(channelId).collection("slack-messages").add({
         message: input,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         user: user.displayName,
